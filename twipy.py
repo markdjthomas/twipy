@@ -6,9 +6,8 @@ def twipy():
     API = tweepy.API(AUTH)
     timeline = API.user_timeline('RLangTip')[0]
     tweet = str(timeline.text)
-    tweet = re.sub('(#.+)', '', tweet)
-    tweet = re.sub('(http://.+)', '', tweet)
-    tweet = re.sub(':', '.', tweet)
+    tweet = re.sub('(#.+)', '', tweet)  # comment out if you want hashtags
+    tweet = re.sub('(http://.+)', '', tweet)  # comment out if you want urls
     print '@RLangTip: ' + tweet
     
 if __name__ == "__main__": 
