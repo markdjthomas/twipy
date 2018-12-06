@@ -5,7 +5,7 @@ The script grabs the most recent status from [@RLangTip](https://twitter.com/RLa
 ![twipy screenshot](./R_screenshot.png)
 The script requires that you edit your `.Rprofile` by adding the following:
 
-```{r}
+```
 .First <- function() {
 	system('clear')  # comment out to keep the regular R startup message
 	startup <- system("python /path/to/twipy.py", intern=TRUE)
